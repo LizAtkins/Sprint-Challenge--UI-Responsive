@@ -51,13 +51,17 @@ table {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -67,16 +71,50 @@ p {
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center; 
     margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+}
+
+.top-content .top-nav-bar {
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    margin-top: 2rem;
+
+}
+
+.top-content .top-nav-bar a {
+    padding: 2rem;  
+    text-decoration: none;  /* Removes underline */
+    color: black;  /* Sets text color */
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.top-content .top-nav-bar a:hover {
+    color: #007bff;  
+}
+
+.top-content .navbar-brand {
+    margin-bottom: 2rem;
+    
+}
+
+.header-img {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+    margin: 2rem 0;
 }
 
 .top-content .text-container {
@@ -112,6 +150,53 @@ p {
     justify-content: center;
 }
 
+/* Media Queries */
+
+@media(max-width: 1000px) {
+    .middle-content .boxes .box.box-two  {
+        background: forestgreen;
+    }
+    .middle-content .boxes .box.box-four  {
+        background: darkorchid;
+    }
+    .middle-content .boxes .box.box-six  {
+        background: hotpink;
+    }
+    .middle-content .boxes .box.box-eight  {
+        background: indigo;
+    }
+    .middle-content .boxes .box.box-ten  {
+        background: lawngreen;
+    }
+}
+
+@media (max-width: 768px) {
+    .middle-content .boxes .box.box-one  {
+        background: teal;
+    } 
+    .middle-content .boxes .box.box-three  {
+        background: gold;
+    }
+    .middle-content .boxes .box.box-five  {
+        background: cadetblue;
+    }
+    .middle-content .boxes .box.box-seven  {
+        background: coral;
+    }
+    .middle-content .boxes .box.box-nine  {
+        background: crimson;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .middle-content .boxes .box.box-ten  {
+        display: none;
+    }
+
+}
+
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -126,6 +211,9 @@ p {
     padding-right: 0;
 }
 
+
+
+
 footer {
     width: 100%;
     background: black;
@@ -137,10 +225,11 @@ footer nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 2%;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
 }
+
